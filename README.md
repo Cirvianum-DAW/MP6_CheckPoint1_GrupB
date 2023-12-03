@@ -1,27 +1,59 @@
 # Check Point 1 - UF1 i UF2 - Fonaments de JS, funcions i arrays.
 
-## :warning: **ATENCIÓ!** No creeïs cap arxiu nom i treballa als arxius ja creats amb els noms Ex1, Ex2 and Ex3 sota la carpeta /src i fes un commit per cada exercici! Verifica els testos per acabar d'entendre el que es demana i verificar que el resultat és l'esperat :warning:
+## :warning: **ATENCIÓ!** No creeïs cap arxiu nou i treballa als arxius ja creats amb els noms Ex1, Ex2 and Ex3 sota la carpeta /src i fes un commit per cada exercici! Verifica els testos per acabar d'entendre el que es demana i verificar que el resultat és l'esperat :warning:
 
-### :weight_lifting_man: Exercici 1 - Tauler d'escacs (2punts)
+### Notes importants generals
+- Es valorarà que el codi sigui net, ordenat i òptim d'acord amb el que s'ha vist a classe. No és suficient que el codi funcioni per obtenir la nota màxima:
+    - 0p: Codi no funciona o no s'ha implementat la funció.
+    - 1/3p: Codi NO-funcional però net, ordenat i òptim fins a un cert punt ("errada tonta").
+    - 2/3p: Codi funcional però no és net, ordenat i òptim. 
+    - 1p: Codi funcional i net, ordenat i òptim.
+- Es valorarà que el codi estigui comentat.
+- Utilitzeu noms significatius per a les variables i funcions per millorar la llegibilitat del codi.
 
-Crea un script que generi una cadena de text (string) que representi una graella d'8 × 8, utilitzant salts de línia per separar les files. En cada posició de la graella hi ha un espai o un caràcter "#". Aquests caràcters formen un taulell d'escacs.
+### :weight_lifting_man: Exercici 1 - Finances Cirvianum (2punts)
 
-:bulb: **Has de fer servir al menys una sentència de repetició (com per exemple el `for`) i una sentència condicional (com per exemple el `if`).**
+**Exercici de Finances per l'Institut Cirvianum**
 
-Quan passes aquesta cadena de text a `console.log`, s'hauria de mostrar alguna cosa com això:
+En aquest exercici, heu de desenvolupar un sistema de gestió de finances per a l'Institut Cirvianum. Les dades proporcionades són fictícies, però estan orientades al context d'un institut. Les funcions a implementar són de diversa complexitat i estan dissenyades per ser resoltes de manera incremental, és a dir, en l'ordre en què apareixen a l'enunciat.
 
-```javascript
- # # # #
-# # # #
- # # # #
-# # # #
- # # # #
-# # # #
- # # # #
-# # # #
-```
 
-**Puntuació: 0p si el programa no funciona o no s'ha fet ús de cap dels requisits. 1p si s'ha fet un ús parcial. 2p s'hi s'ha fet ús de for i if**
+**Notes Exercici:**
+- Cada funció ha de ser implementada en ordre, ja que les funcions posteriors podrien dependre de les anteriors i es valorarà que ho feu d'aquesta manera.
+- Podeu fer servir i es valora l'ús d'objectes i mètodes predefinits del llenguatge per facilitar algunes operacions (mètodes de `Math`, `Object`, `String`, etc...).
+
+1. **Ingressos de l'Institut:**
+   - Declareu un objecte `institutCirvianum` que contingui els ingressos de l'institut. Aquest objecte ha de tenir propietats com `subvencions`, `matricules` i `altres`.
+   
+2. **Despeses Fixes de l'Institut:**
+   - Declareu un objecte `despesesFixes` que contingui les despeses fixes de l'institut. Aquest objecte ha de tenir propietats com `salaris`, `serveis` i `materialDidactic`.
+
+3. **Despeses Variables de l'Institut:**
+   - Declareu un array `despesesVariables` que contingui diverses despeses variables de l'institut. Cada despesa ha de tenir un `concepte` i una `quantitat`.
+
+4. **Funció per Calcular Ingressos Total:**
+   - Implementeu una funció que, donat l'objecte `institutCirvianum`, retorni la suma total dels ingressos.
+
+5. **Funció per Calcular Despesa Fixa Total:**
+   - Implementeu una funció que, donat l'objecte `despesesFixes`, retorni la suma total de les despeses fixes.
+
+6. **Funció per Calcular Despesa Variable Total:**
+   - Implementeu una funció que, donat l'array `despesesVariables`, retorni la suma total de les despeses variables.
+
+7. **Funció per Calcular Despesa Total:**
+   - Implementeu una funció que, fent ús de les funcions anteriors, retorni la suma total de totes les despeses (fixes i variables) de l'institut.
+
+8. **Funció per Calcular Superàvit:**
+   - Implementeu una funció que, fent ús de les funcions de càlcul d'ingressos i despeses totals, retorni la diferència entre els ingressos i les despeses.
+
+9. **Funció per Informar l'Estat Financer:**
+   - Implementeu una funció que, fent ús de la funció de càlcul del superàvit, mostri un missatge a la consola indicant si hi ha superàvit o dèficit.
+
+10. **Funció per Afegir Despesa Variable:**
+    - Implementeu una funció que permeti afegir una nova despesa variable a l'array `despesesVariables`. Aquesta funció ha de rebre els paràmetres necessaris (concepte i quantitat).
+
+11. **Funció per Eliminar Despesa Variable:**
+    - Implementeu una funció que permeti eliminar una despesa variable de l'array `despesesVariables`. Aquesta funció ha de rebre el concepte de la despesa a eliminar.
 
 ### :fire: Exercici 2 - Week Planner (2punts)
 

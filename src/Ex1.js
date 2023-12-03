@@ -1,3 +1,3 @@
-function taulerEscacs() {}
+// Desenvolupa aqui les funcions demanades
 
-module.exports = { taulerEscacs };
+// Exercici 1
