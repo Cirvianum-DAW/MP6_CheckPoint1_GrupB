@@ -1,109 +1,111 @@
-# Check Point 1 - UF1 i UF2 - Fonaments de JS, funcions i arrays.
+# Check Point 1 - DAW MP6 2023/2024
+
+## UF1 (50% Nota final) i UF2 (25% Nota final) - Fonaments de JS, funcions i arrays.
+
+## Aquests percentatges són en relació a la nota final d'examens/proves (60% de la nota final del mòdul)
 
 ## :warning: **ATENCIÓ!** No creeïs cap arxiu nou i treballa als arxius ja creats amb els noms Ex1, Ex2 and Ex3 sota la carpeta /src i fes un commit per cada exercici! Verifica els testos per acabar d'entendre el que es demana i verificar que el resultat és l'esperat :warning:
 
-### Notes importants generals
+### Notes generals MOLT IMPORTANTS
+
 - Es valorarà que el codi sigui net, ordenat i òptim d'acord amb el que s'ha vist a classe. No és suficient que el codi funcioni per obtenir la nota màxima:
-    - 0p: Codi no funciona o no s'ha implementat la funció.
-    - 1/3p: Codi NO-funcional però net, ordenat i òptim fins a un cert punt ("errada tonta").
-    - 2/3p: Codi funcional però no és net, ordenat i òptim. 
-    - 1p: Codi funcional i net, ordenat i òptim.
+  - 0p: Codi no funciona o no s'ha implementat la funció.
+  - 1/3p: Codi NO-funcional però net, ordenat i òptim fins a un cert punt ("errada tonta").
+  - 2/3p: Codi funcional però no és net, ordenat i òptim.
+  - 1p: Codi funcional i net, ordenat i òptim.
 - Es valorarà que el codi estigui comentat.
 - Utilitzeu noms significatius per a les variables i funcions per millorar la llegibilitat del codi.
 
-### :weight_lifting_man: Exercici 1 - Finances Cirvianum (2punts)
+### :fire: Exercici 1 - Week Planner (2punts)
+
+**Exercici: Endevina la Data**
+
+Quin desastre! Teníem un joc acabat però no sé que hem fet que em perdut el codi font i ens ha quedat ben poc. El joc consistia en el següent:
+
+- L'usuari ha d'endevinar un any de naixement aleatori entre 1980 i 2024.
+- Si no sabeu com generar el número aleatori, al menys poseu vosaltres un any hardcodejat.
+- L'usuari introdueix l'any amb un prompt.
+- L'usuari té 5 oportunitats per endevinar l'any correcte.
+- Si l'usuari encerta, es mostra un missatge d'encert (alert)
+- Si l'usuari introdueix un any més petit, es mostra un missatge indicant que l'any és més petit.
+- Si l'usuari introdueix un any més gran, es mostra un missatge indicant que l'any és més gran.
+- Si l'usuari esgota les oportunitats sense encertar, es mostra un missatge indicant que ha perdut.
+- Si l'usuari encerta abans d'esgotar les oportunitats, es mostra un missatge indicant que ha guanyat.
+
+Ens ha quedat només això del codi:
+
+```javascript
+const anyNaixement = () => {
+
+    return any;
+};
+
+const any = anyNaixement();
+
+const endevinarAny = () => {
+  let endevina;
+  let intents = 0;
+  while () {
+
+  }
+  alert('Has esgotat les teves oportunitats!');
+};
+
+endevinarAny();
+```
+
+Ens ajudes a acabar el joc?
+
+### :weight_lifting_man: Exercici 2 - Finances Cirvianum (4punts)
 
 **Exercici de Finances per l'Institut Cirvianum**
 
 En aquest exercici, heu de desenvolupar un sistema de gestió de finances per a l'Institut Cirvianum. Les dades proporcionades són fictícies, però estan orientades al context d'un institut. Les funcions a implementar són de diversa complexitat i estan dissenyades per ser resoltes de manera incremental, és a dir, en l'ordre en què apareixen a l'enunciat.
 
+**IMPORTANT LLEGIR!!!**
 
-**Notes Exercici:**
-- Cada funció ha de ser implementada en ordre, ja que les funcions posteriors podrien dependre de les anteriors i es valorarà que ho feu d'aquesta manera.
+- FES SERVIR EL NOM DE LES FUNCIONS QUE ES DEMANEN.
+- Declara totes les variables i funcions en aquest mateix arxiu i tindràs accés en tot moment (variables globals).
+- Per provar les funcions pots fer servir la consola del navegador o node.js amb `node src/Ex.js`.
+- És aconsellable desenvolupar les funcins en ordre, ja que les funcions posteriors podrien dependre de les anteriors i es valorarà que ho feu d'aquesta manera.
 - Podeu fer servir i es valora l'ús d'objectes i mètodes predefinits del llenguatge per facilitar algunes operacions (mètodes de `Math`, `Object`, `String`, etc...).
+- En parèntesi trobaràs els quantitats que faré servir per provar les funcions. No has d'implementar els testos, pots anar provant els teus resultats a la consola del navegador.
 
-1. **Ingressos de l'Institut:**
-   - Declareu un objecte `institutCirvianum` que contingui els ingressos de l'institut. Aquest objecte ha de tenir propietats com `subvencions`, `matricules` i `altres`.
-   
-2. **Despeses Fixes de l'Institut:**
-   - Declareu un objecte `despesesFixes` que contingui les despeses fixes de l'institut. Aquest objecte ha de tenir propietats com `salaris`, `serveis` i `materialDidactic`.
+1. **Ingressos de l'Institut:** (1p)
 
-3. **Despeses Variables de l'Institut:**
-   - Declareu un array `despesesVariables` que contingui diverses despeses variables de l'institut. Cada despesa ha de tenir un `concepte` i una `quantitat`.
+   - Declareu un objecte `institutCirvianum` que contingui el `NIF` ("12345678A"), `adreça` ("Carrer Autista March, s/n, 08570 Torelló") i `secretaria` ("Teresa Secretaria") així com els ingressos de l'institut. Els ingressos han de formar part de `institutCirvianum` en un objecte anomenat `ingressos` que ha de tenir propietats com `subvencions` (75000), `matricules` (10000) i `altres` (8000).
 
-4. **Funció per Calcular Ingressos Total:**
-   - Implementeu una funció que, donat l'objecte `institutCirvianum`, retorni la suma total dels ingressos.
+2. **Despeses Fixes de l'Institut:** (0,5p)
 
-5. **Funció per Calcular Despesa Fixa Total:**
-   - Implementeu una funció que, donat l'objecte `despesesFixes`, retorni la suma total de les despeses fixes.
+   - Declareu un objecte `despesesFixes` que contingui les despeses fixes de l'institut. Aquest objecte ha de tenir les propietats: `salaris` (45000), `serveis` (22000) i `materialDidactic` (10000).
 
-6. **Funció per Calcular Despesa Variable Total:**
-   - Implementeu una funció que, donat l'array `despesesVariables`, retorni la suma total de les despeses variables.
+3. **Despeses Variables de l'Institut:** (0,5p)
 
-7. **Funció per Calcular Despesa Total:**
-   - Implementeu una funció que, fent ús de les funcions anteriors, retorni la suma total de totes les despeses (fixes i variables) de l'institut.
+   - Declareu un array `despesesVariables` que contingui diverses despeses variables de l'institut. Cada despesa ha de tenir un `concepte` i una `quantitat`. Les despeses que ha de contenir són: `materialOficina` (2000), `materialNeteja` (1000), `materialInformatic` (3000) i `activitatsExtraescolars` (5000).
 
-8. **Funció per Calcular Superàvit:**
-   - Implementeu una funció que, fent ús de les funcions de càlcul d'ingressos i despeses totals, retorni la diferència entre els ingressos i les despeses.
+4. **Funció per Calcular Ingressos Totals:** (1p)
 
-9. **Funció per Informar l'Estat Financer:**
-   - Implementeu una funció que, fent ús de la funció de càlcul del superàvit, mostri un missatge a la consola indicant si hi ha superàvit o dèficit.
+   - Implementeu una funció `sumIngressos` que, donat l'objecte `institutCirvianum`, retorni la suma total dels ingressos. Pots guardar el resultat en una variable global anomenada `ingressosTotals`.
 
-10. **Funció per Afegir Despesa Variable:**
-    - Implementeu una funció que permeti afegir una nova despesa variable a l'array `despesesVariables`. Aquesta funció ha de rebre els paràmetres necessaris (concepte i quantitat).
+5. **Funció per Calcular Despeses Totals:** (1,5p)
 
-11. **Funció per Eliminar Despesa Variable:**
+   - Implementeu una funció `sumDespeses` que, donat els objectes `despesesFixes` i `despesesVariables`, retorni la suma total de les despeses (fixes i variables) de l'institut. Pots guardar el resultat en una variable global anomenada `despesesTotals`.
+
+6. **Funció per Calcular Estat Financer:** (1p)
+
+   - Implementeu una funció `estatFinancer` que, donats els `ingressosTotals` i les `despesesTotals`, retorni l'estat financer de l'institut (ingressos - despeses) amb una precisió de 2 decimals. Assegura't de retornar el resultat en format de número. Guarda el resultat en una variable global anomenada `balançGlobal`.
+
+7. **Funció per Informar de si hi ha Superàvit o Dèficit:** (1p)
+
+   - Implementeu una funció `superavit`, que donat un balanç (el retornat per la funció superàvit en el teu cas), mostri: "L'Institut Cirvianum amb NIF 12345678A té un superàvit de 1000€". Si no hi ha superàvit, el missatge ha de ser: "L'Institut Cirvianum amb NIF 12345678A té un dèficit de 1000€". NIF, superàvit/dèficit i quantitat han de ser variables i generar-se dinàmicament.
+
+8. **Funció per mostrar una alerta per pantalla amb l'estat financer:** (0,5p)
+
+   - Feu una nova funció anomenada `superavitAlert` i copiant el codi de l'anterior, de manera que es mostri el missatge a través d'una alerta per pantalla amb les xifres en dos decimals. Per exemple, si l'estat financer és de 1000.123456789, l'alerta ha de mostrar "L'Institut Cirvianum amb NIF 12345678A té un superàvit de 1000.12€".
+
+9. **Funció per Afegir Despesa Variable:** (1,5p)
+
+   - Implementeu una funció `afegirDespesa` que permeti afegir una nova despesa variable a l'array `despesesVariables`. Aquesta funció ha de rebre els paràmetres necessaris (concepte i quantitat). Si no rep la quantitat la genera aleatòriament entre 1000 i 5000. Ha de retornar l'array `despesesVariables` amb la nova despesa afegida.
+
+10. **Funció per Eliminar Despesa Variable:** (1,5p)
     - Implementeu una funció que permeti eliminar una despesa variable de l'array `despesesVariables`. Aquesta funció ha de rebre el concepte de la despesa a eliminar.
-
-### :fire: Exercici 2 - Week Planner (2punts)
-
-En aquest exercici, crearàs un petit planificador d'activitats. L'objectiu és calcular si tens temps suficient per realitzar les activitats diàries que tens planejades. El programa calcularà el temps disponible a partir de les teves hores de son, el temps que passes treballant i altres compromisos.
-
-Per practicar-ho, et facilitem les dades amb les que hauràs de provar el teu programa. Aquestes dades són les següents i ja les tens disponibles al mateix arxiu:
-
-```javascript
-const sleepHours = {
-    monday: 7,
-    tuesday: 6,
-    wednesday: 8,
-    thursday: 7,
-    friday: 6,
-    saturday: 9,
-    sunday: 8,
-    idealHoursDay: 8
-};
-
-const workHours = 8;
-
-const activities = [
-    { name: 'Gym', time: 1 },
-    { name: 'Party', time: 2 },
-    { name: 'Watch TV', time: 3 }
-    { name: 'Play videogames', time: 5 }
-];
-```
-
-A continuació hauràs d'implementar les següents funcions (cada funció ha de retornar el valor que s'indica):
-
-- `getSleepHours(day)`: Retorna les hores de son d'un dia específic.
-- `getActualSleepHours()`: Retorna el total d'hores reals de son que has dormit la setmana passada.
-- `getIdealSleepHours()`: Retorna el total d'hores ideals de son que prefereixes dormir la setmana
-- `getFreeTimeHours()`: Retorna les hores lliures disponibles a la setmana després de descomptar les hores de son i de treball.
-- `calculateActivitiesTime(activities)`: Permet als usuaris especificar les activitats que volen realitzar (teniu la mostra) i retorna el temps necessari TOTAL per completar-les.
-- `canDoActivities(activities)`: ha de cridar `calculateActivitiesTime(activities)` i comprovar si hi ha prou temps lliure per realitzar totes les activitats. Mostra un missatge a la consola segons la situació: si es poden fer totes les activitats o si no hi ha prou temps lliure.
-
-**Puntuació: cada funció té el mateix pes, 2/6 = 1/3p**
-
-### :rocket: Exercici 3 - Databases (2,5punts)
-
-L'exercici 3 té importada una base de dades en format JSON i ja passades a un arxiu js. Pots veure les dades a l'arxiu data_ex3.js
-
-Hauràs de realitzar les següents tasques. T'aconsello que pensis bé en cada cas quin mètode de l'array és el més adequat per resoldre cada cas:
-
-1. Retornar un array amb tots els usuaris que tenen el hobbie "running" (0,5p).
-2. Calcular i retornar la mitjana d'edat (numero arrodonit a l'enter més petit) de les amistats de l'usuari en funció de l'id que li passem (1p).
-3. Retornar un array amb els hobbies que comparteixen l'usuari i les seves amistats si existeixen (1p).
-
-Puntuació: només comptarà si funciona la funció i es fan servir mètodes d'arrays.
-
-:speech_balloon: **Hi ha 0,5p extra. 4p del test + 6,5p (10,5p) totals que es poden aconseguir i poden ajudar a pujar nota. La nota màxima final haurà de ser <= 10 en qualssevol cas.**
