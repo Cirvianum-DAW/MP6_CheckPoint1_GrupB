@@ -38,3 +38,4 @@ module.exports = {
   calculaeActivityTime,
   canDoActivities,
 };
+// Desenvolupa aquí el codi del joc
